@@ -1,10 +1,12 @@
 import React from 'react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer'
 
 function Contact() {
   return (
     <>
     <div className="w-screen flex flex-col items-center">
- 
+        <Navbar/>
         <div className="w-full h-[150px] bg-teal-500 flex justify-center items-center font-bold text-3xl">
             <h1 className="text-center items-center">CONTACT US</h1>
         </div>
@@ -19,6 +21,7 @@ function Contact() {
           <button className="border rounded-full bg-amber-400 hover:bg-amber-300 p-3 font-semibold">Contact Us</button>
         </div>
     </div>
+    <Footer/>
 
     </>
   );
