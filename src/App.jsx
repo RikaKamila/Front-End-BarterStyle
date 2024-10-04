@@ -10,11 +10,33 @@ import Login from './components/Login';
 import About from './pages/About';
 import Contact from './pages/Contact';
 
-
 function App() {
+  
+  //state
+  const [isLogin,setIsLogin] = useState(false)
+  const [loading,setLoading] = useState (true)
 
+  useEffect(()=> {
 
+    const auth = getAuth ()
+    onAuthStateChanged (auth, (result) => {
+      if (result) {
+        setIsLogin(true)
+        setLoading(false)
+        return
+      }
+      setIsLogin(false)
+      setLoading(false)
+    })
+  }, [])
 
+  if (loading) {
+    return (
+    <div className='w-screen h-screen flex flex-col justify-center items-center text-3xl'>
+      Loading..
+      </div>
+      )
+  }
   return (
     <>
           {isLogin ? (
