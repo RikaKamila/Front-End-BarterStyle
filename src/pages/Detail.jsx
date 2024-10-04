@@ -10,6 +10,15 @@ function Detail() {
 
 const location = useLocation()
 const product = location?.state?.product;
+const [likes, setLikes] = useState ('');
+const toggleLike = () =>  {
+
+  if (likes > 0) {
+    setLikes (likes - 1);
+  } else {
+    setLikes (likes + 1);
+  }
+}
 
 
   return (
