@@ -3,9 +3,31 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import { Link } from 'react-router-dom';
 import {useNavigate} from 'react-router-dom'
+import {getAuth,signOut} from "firebase/auth"
 
 
 function ProfilUser() {
+     //State User
+  const [user,setUser] = useState()
+  const navigate = useNavigate()
+
+  useEffect(()=>{
+    setUser(JSON.parse(localStorage.getItem('user')))
+  },[])
+
+  //Logout Function
+  const handleLogout = () => {
+    const auth = getAuth ()
+    signOut (auth)
+    .then(result => {
+      localStorage.clear()
+      navigate('/')
+  })
+  .catch((err) => {
+    console.error (error)
+  })
+}
+
 return (
     <div>
         <Navbar/>
