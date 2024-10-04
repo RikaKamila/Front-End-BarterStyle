@@ -3,7 +3,7 @@ import barterstyle from '../assets/barterstyle.png';
 import Login from './Login';
 import { BiSolidMessageDetail } from "react-icons/bi";
 import { IoNotificationsSharp } from "react-icons/io5";
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Navbar() {
   const [loginPop, setLoginPop] = useState(false);
