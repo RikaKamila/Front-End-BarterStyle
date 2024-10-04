@@ -10,6 +10,7 @@ function Detail() {
 
 const location = useLocation()
 const product = location?.state?.product;
+
 const [likes, setLikes] = useState ('');
 const toggleLike = () =>  {
 
@@ -42,18 +43,18 @@ const toggleLike = () =>  {
             <h2 className="text-base">Jabodetabek</h2>
           </div>
           <div className="flex flex-col gap-2 mt-4">
+            <div
+              className="flex rounded-full text-black p-3 justify-center gap-3 cursor-pointer bg-amber-300 font-bold"
+              onClick={toggleLike}>
+              <MdFavorite className="text-2xl" />
+              <h1 className="text-xl">Like <span>{likes}</span></h1>
+            </div>
             <Link to="/profilUser" className="flex rounded-xl text-black p-3 justify-center gap-3 cursor-pointer bg-teal-400 font-bold">
               <h1 className="text-xl">Profil</h1>
             </Link>
             <Link to="/" className="flex rounded-xl text-white p-3 justify-center gap-3 cursor-pointer bg-black font-bold">
               <h1 className="text-xl">Katalog</h1>
             </Link>
-            <div
-              className="flex rounded-full text-black p-3 justify-center gap-3 cursor-pointer bg-amber-300 font-bold"
-              onClick={toggleLike}>
-              <MdFavorite className="text-2xl" />
-              <h1 className="text-xl">Like <span></span></h1>
-            </div>
           </div>
         </div>
       </div>

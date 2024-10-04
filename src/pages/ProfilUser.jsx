@@ -34,7 +34,7 @@ return (
         <div className=" flex flex-col items-center w-screen h-screen py-5 p-5 ">
           <div className="w-[50%] flex flex-col rounded-lg gap-4 bg-teal-500 p-[50px] justify-center items-center">
             <h1 className="text-4xl font-bold">Welcome To BarterStyle</h1>
-            <img src={user?.photoURL} clasName=" w-[200px] h-[100] rounded-full object-cover"/>
+            <img src={user?.photoURL} className=" w-[200px] h-[100] rounded-full object-cover"/>
             <h3 className="text-2xl font-bold">{user?.displayName}</h3>
             <h3 className="text-2xl">{user?.email}</h3>
           <div className="flex gap-5 p-5">
