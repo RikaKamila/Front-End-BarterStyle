@@ -50,7 +50,7 @@ const toggleLike = () =>  {
             </Link>
             <div
               className="flex rounded-full text-black p-3 justify-center gap-3 cursor-pointer bg-amber-300 font-bold"
-            >
+              onClick={toggleLike}>
               <MdFavorite className="text-2xl" />
               <h1 className="text-xl">Like <span></span></h1>
             </div>
