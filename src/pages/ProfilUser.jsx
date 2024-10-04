@@ -19,7 +19,7 @@ function ProfilUser() {
   const handleLogout = () => {
     const auth = getAuth ()
     signOut (auth)
-    .then(result => {
+    .then(() => {
       localStorage.clear()
       navigate('/')
   })

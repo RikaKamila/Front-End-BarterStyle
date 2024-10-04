@@ -13,7 +13,6 @@ function Home() {
         <Menubar/>
         <Katalog/>
         <Footer/>
-      
     </div>
   );
 }
