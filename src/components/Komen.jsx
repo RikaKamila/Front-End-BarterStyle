@@ -1,11 +1,21 @@
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
-
+import { addKomen} from "../redux/komenSlice"
 
 
 function Komen() {
-    
+    const dispatch = useDispatch();
+    const komens = useSelector((state) => state.komen. komens);
+
+    const [input, setInput] = useState("");
+
+
+    const handleAddKomen = (e) => {
+    e.preventDefault()
+    dispatch(addKomen(input))
+    setInput("")
+  }
     }
     return (
   
@@ -38,6 +48,6 @@ function Komen() {
     </div>
           );
     
-          
+
   export default Komen;
   
